@@ -14,6 +14,13 @@ Encore
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
 
+    // Enable Sass Support
+    .enableSassLoader()
+
+    // Enable PostCSS Support
+    .enablePostCssLoader()
+    .addStyleEntry('tailwind', './assets/styles/tailwindcss.css')
+
     /*
      * ENTRY CONFIG
      *
