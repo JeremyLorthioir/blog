@@ -1,0 +1,5 @@
+framework:
+    assets:
+          version: '311nk2'
+          version_format: '%%s?v=%%s'
+          base_path: /assets/
