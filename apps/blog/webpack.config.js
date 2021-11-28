@@ -19,7 +19,8 @@ Encore
 
     // Enable PostCSS Support
     .enablePostCssLoader()
-    .addStyleEntry('tailwind', './assets/styles/tailwindcss.css')
+    .addStyleEntry('bootstrap', './assets/css/bootstrap.css')
+    .addStyleEntry('custom', './assets/css/app.css')
 
     /*
      * ENTRY CONFIG
