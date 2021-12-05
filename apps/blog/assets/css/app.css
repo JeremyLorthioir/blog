@@ -68,6 +68,8 @@ header .site-branding h1 p {
     font-size: .8rem;
     letter-spacing: 1px;
     line-height: 60px;
+    display: block;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 769px) {
