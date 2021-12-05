@@ -21,7 +21,17 @@
 		{% endblock %}
 	</head>
 	<body>
-		{% include('navbar.html.twig') %}
+		<header>
+			<div class="container">
+				<div class="site-branding">
+					<h1 class="site-title">
+						<a href="#">Jerem Dev</a>
+					</h1>
+					<p class="site-description">Café et code, pas toujours dans cet ordre</p>
+				</div>
+			</div>
+			{% include('navbar.html.twig') %}
+		</header>
 
 		<div class="row" style="width: 90%; margin: auto;">
 			<div class="col-md-9"> {% block body %}{% endblock %}

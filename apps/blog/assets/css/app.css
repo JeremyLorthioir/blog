@@ -6,8 +6,37 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Merriweather,serif;
     font-weight: 700;
 }
+/* ==========================================
+HOMEPAGE
+==========================================*/
+header .site-branding {
+    padding: 40px 0;
+    text-align: center;
+}
+header .site-branding h1 {
+    font-family: Lato,sans-serif;
+    font-weight: 300;
+    font-size: 64px;
+    font-size: 4rem;
+    letter-spacing: 4px;
+    line-height: normal;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    word-break: break-all;
+    word-break: break-word;
+}
 
-
+header .site-branding h1 a {
+    color: #2d2d2d;
+    text-decoration: none;
+}
+header .site-branding h1 p {
+    font-size: .9333rem;
+    line-height: 1.7142;
+    margin-bottom: 0;
+    text-align: center;
+}
 
 /* ==========================================
 HOMEPAGE
