@@ -4,5 +4,7 @@
 {% endblock %}
 
 {% block body %}
-	{{ blog_post.content|striptags|markdown }}
+	<div class="blog-post">
+		{{ blog_post.content|striptags|markdown }}
+	</div>
 {% endblock %}
