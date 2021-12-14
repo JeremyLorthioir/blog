@@ -19,7 +19,13 @@ class BlogController extends AbstractController
 
     public function show($url)
     {
-        return new Response('<h1>Lire l\'article ' . $url . '</h1>');
+        $blog_post = [
+            'title' => 'Mon tout premier post',
+            'content' => 'Mon premier paragraphe'
+        ];
+        return $this->render('blog/view.html.twig', [
+            'blog_post' => $blog_post
+        ]);
     }
 
     public function edit($id)
