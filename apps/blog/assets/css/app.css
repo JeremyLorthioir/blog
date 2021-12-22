@@ -231,8 +231,23 @@ BLOG POST
   }
   
   .blog-post pre code {
-    background-color: transparent;
-    border-width: 0;
+      color: #ABB2BF;
+      background: #282c34;
+      font-family: "Fira Code", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace !important;
+      font-size: 14px;
+      line-height: 1.5;
+      text-align: left;
+      white-space: pre;
+      word-spacing: normal;
+      word-break: normal;
+      word-wrap: normal;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
   }
   
   .blog-post blockquote {
