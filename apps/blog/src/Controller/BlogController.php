@@ -22,11 +22,11 @@ class BlogController extends AbstractController
     {
         $blog_post = [
             'title' => 'Mon tout premier post',
-            'content' => ''
+            'content' => '<h2>Titre du post</h2>'
         ];
         return $this->render('blog/view.html.twig', [
             'blog_post' => $blog_post,
-            'html_content' => $parser->transformMarkdown($blog_post['content'])
+            'html_content' => $blog_post['content']
         ]);
     }
 

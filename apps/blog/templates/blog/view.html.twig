@@ -5,6 +5,6 @@
 
 {% block body %}
 	<div class="blog-post">
-		{{ blog_post.content|striptags|markdown }}
+		{{ blog_post.content | raw }}
 	</div>
 {% endblock %}
