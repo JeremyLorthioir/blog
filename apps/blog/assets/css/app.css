@@ -209,7 +209,7 @@ BLOG POST
     line-height: 1.5em;
   }
   
-  .blog-post code {
+  /* .blog-post code {
     padding: 0.1em;
     font-size: 14px;
     font-family: "Menlo", monospace;
@@ -229,7 +229,11 @@ BLOG POST
     -ms-box-shadow: 0 1px 3px 0 #eee;
     box-shadow: 0 1px 3px 0 #eee;
   }
-  
+
+  .blog-post pre.language {
+    background: #282c34;
+  }
+
   .blog-post pre code {
       color: #ABB2BF;
       background: #282c34;
@@ -248,7 +252,7 @@ BLOG POST
       -moz-hyphens: none;
       -ms-hyphens: none;
       hyphens: none;
-  }
+  } */
   
   .blog-post blockquote {
     border-top: 1px solid #efefef;
