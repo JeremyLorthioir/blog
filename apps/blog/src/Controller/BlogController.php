@@ -22,23 +22,7 @@ class BlogController extends AbstractController
     {
         $blog_post = [
             'title' => 'Mon tout premier post',
-            'content' => '<h2>Titre du post</h2><pre><code class="language-css hljs"><span class="hljs-keyword">@font-face</span> {
-                <span class="hljs-attribute">font-family</span>: Chunkfive; <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string"></span>);
-              }
-              
-              <span class="hljs-selector-tag">body</span>, <span class="hljs-selector-class">.usertext</span> {
-                <span class="hljs-attribute">color</span>: <span class="hljs-number">#F0F0F0</span>; <span class="hljs-attribute">background</span>: <span class="hljs-number">#600</span>;
-                <span class="hljs-attribute">font-family</span>: Chunkfive, sans;
-                <span class="hljs-attr">--heading-1</span>: <span class="hljs-number">30px</span>/<span class="hljs-number">32px</span> Helvetica, sans-serif;
-              }
-              
-              <span class="hljs-keyword">@import</span> url(print.css);
-              <span class="hljs-keyword">@media</span> print {
-                <span class="hljs-selector-tag">a</span><span class="hljs-selector-attr">[href^=http]</span><span class="hljs-selector-pseudo">::after</span> {
-                  <span class="hljs-attribute">content</span>: <span class="hljs-built_in">attr</span>(href)
-                }
-              }
-              </code></pre>'
+            'content' => ''
         ];
         return $this->render('blog/view.html.twig', [
             'blog_post' => $blog_post,
