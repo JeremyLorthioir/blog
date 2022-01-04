@@ -2,10 +2,6 @@
     font-family: 'Lato', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Merriweather,serif;
-    font-weight: 700;
-}
 /* ==========================================
 HEADER
 ==========================================*/
@@ -123,7 +119,6 @@ HOMEPAGE
 BLOG POST
 ==========================================*/
 .blog-post body {
-    font-family: 'Helvetica Neue', sans;
     background: #ffffff;
     color: #222;
     margin: 2em auto;
@@ -132,6 +127,34 @@ BLOG POST
     line-height: 1.5em;
     font-size: 16px;
     font-weight: 300;
+  }
+
+  /* TITLES */
+  .blog-post .blog-post-title {
+    background-color: #cccccc21;
+    color: #626262;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+  }
+
+  /* PARAGRAPHS */
+  .blog-post p.blog-post-content {
+    text-align: justify;
+  }
+
+  /* LINKS */
+  .blog-post p.blog-post-content a {
+    color: #84c6ff;
+    text-decoration: underline;
+  }
+
+  .blog-post p.blog-post-content a:hover {
+    color: #6c757d;
+    text-decoration: none;
+    cursor: pointer;
   }
   
   .blog-post img {
@@ -143,22 +166,9 @@ BLOG POST
     margin: 1em 0;
   }
   
-  .blog-post a {
-    color: #00213D;
-  }
-  
-  .blog-post a:visited {
-    color: #00213D;
-    background-color: transparent;
-  }
-  
   .blog-post a:active {
     color: #318100;
     background-color: transparent;
-  }
-  
-  .blog-post a:hover {
-    text-decoration: none;
   }
   
   .blog-post p img {
@@ -208,51 +218,6 @@ BLOG POST
   .blog-post li {
     line-height: 1.5em;
   }
-  
-  /* .blog-post code {
-    padding: 0.1em;
-    font-size: 14px;
-    font-family: "Menlo", monospace;
-    background-color: #f5f5f5;
-    border: 1px solid #efefef;
-  }
-  
-  .blog-post pre {
-    font-family: "Menlo", monospace;
-    background-color: #fff;
-    padding: 0.5em;
-    line-height: 1.25em;
-    border: 1px solid #efefef;
-    border-bottom: 1px solid #ddd;
-    -webkit-box-shadow: 0 1px 3px 0 #eee;
-    -moz-box-shadow: 0 1px 3px 0 #eee;
-    -ms-box-shadow: 0 1px 3px 0 #eee;
-    box-shadow: 0 1px 3px 0 #eee;
-  }
-
-  .blog-post pre.language {
-    background: #282c34;
-  }
-
-  .blog-post pre code {
-      color: #ABB2BF;
-      background: #282c34;
-      font-family: "Fira Code", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace !important;
-      font-size: 14px;
-      line-height: 1.5;
-      text-align: left;
-      white-space: pre;
-      word-spacing: normal;
-      word-break: normal;
-      word-wrap: normal;
-      -moz-tab-size: 4;
-      -o-tab-size: 4;
-      tab-size: 4;
-      -webkit-hyphens: none;
-      -moz-hyphens: none;
-      -ms-hyphens: none;
-      hyphens: none;
-  } */
   
   .blog-post blockquote {
     border-top: 1px solid #efefef;
