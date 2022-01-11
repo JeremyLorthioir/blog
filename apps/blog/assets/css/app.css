@@ -207,3 +207,16 @@ BLOG POST
 .blog-post img {
   box-shadow: 1px 10px 0 rgb(0 0 0 / 15%);
 }
+
+/* ==========================================
+CONTACT
+==========================================*/
+.contact-form {
+  background-color: #fbfbfb;
+  padding: 20px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 15%);
+}
+
+.contact-form input {
+  padding: 1rem;
+}
