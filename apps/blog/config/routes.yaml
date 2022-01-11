@@ -2,6 +2,10 @@ homepage:
   path: /
   controller: App\Controller\BlogController::index
   
+about:
+  path: /about
+  controller: App\Controller\BlogController::about
+  
 article_add:
   path: /add
   controller: App\Controller\BlogController::add

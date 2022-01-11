@@ -13,6 +13,11 @@ class BlogController extends AbstractController
         return $this->render('blog/index.html.twig', []);
     }
 
+    public function about()
+    {
+        return $this->render('blog/about.html.twig', []);
+    }
+
     public function add()
     {
         return new Response('<h1>Ajouter un article</h1>');
