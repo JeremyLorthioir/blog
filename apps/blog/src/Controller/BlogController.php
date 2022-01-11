@@ -17,6 +17,11 @@ class BlogController extends AbstractController
     {
         return $this->render('blog/about.html.twig', []);
     }
+   
+    public function contact()
+    {
+        return $this->render('blog/contact.html.twig', []);
+    }
 
     public function add()
     {

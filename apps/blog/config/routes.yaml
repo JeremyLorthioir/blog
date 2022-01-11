@@ -5,6 +5,10 @@ homepage:
 about:
   path: /about
   controller: App\Controller\BlogController::about
+
+contact:
+  path: /contact
+  controller: App\Controller\BlogController::contact
   
 article_add:
   path: /add
