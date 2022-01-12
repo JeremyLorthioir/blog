@@ -2,9 +2,12 @@
 
 namespace App\Controller;
 
+use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Knp\Bundle\MarkdownBundle\MarkdownParserInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mailer\MailerInterface;
 
 class BlogController extends AbstractController
 {
@@ -17,10 +20,31 @@ class BlogController extends AbstractController
     {
         return $this->render('blog/about.html.twig', []);
     }
-   
-    public function contact()
+
+    public function contact(Request $request, MailerInterface $mailer)
     {
-        return $this->render('blog/contact.html.twig', []);
+        $form = $this->createForm(ContactType::class);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $contactFormData = $form->getData();
+
+            $message = (new Email())
+                ->from('jeremy.lorthioir24@gmail.com')
+                ->to('jeremy.lorthioir24@gmail.com')
+                ->subject('vous avez reçu un email')
+                ->text(
+                    'Sender : ' . $contactFormData['email'] . \PHP_EOL .
+                        $contactFormData['message'],
+                    'text/plain'
+                );
+            $mailer->send($message);
+            $this->addFlash('success', 'Vore message a été envoyé');
+            return $this->redirectToRoute('contact');
+        }
+        return $this->render('blog/contact.html.twig', [
+            'contact_form' => $form->createView()
+        ]);
     }
 
     public function add()
@@ -28,7 +52,7 @@ class BlogController extends AbstractController
         return new Response('<h1>Ajouter un article</h1>');
     }
 
-    public function show($url, MarkdownParserInterface $parser)
+    public function show($url)
     {
         $blog_post = [
             'title' => 'Mon tout premier post',
