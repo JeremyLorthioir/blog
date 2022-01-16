@@ -30,11 +30,13 @@ class BlogController extends AbstractController
             $contactFormData = $form->getData();
 
             $message = (new Email())
-                ->from('jeremy.lorthioir24@gmail.com')
+                ->from('contact@jerem-dev.fr')
                 ->to('jeremy.lorthioir24@gmail.com')
-                ->subject('vous avez reçu un email')
+                ->subject('[JEREM DEV] Nouvelle demande de contact')
                 ->text(
-                    'Sender : ' . $contactFormData['email'] . \PHP_EOL .
+                    'Nom : ' . $contactFormData['nom'] . \PHP_EOL .
+                    'Email : ' . $contactFormData['email'] . \PHP_EOL .
+                    'Telephone : ' . $contactFormData['telephone'] . \PHP_EOL . \PHP_EOL .
                         $contactFormData['message'],
                     'text/plain'
                 );
