@@ -33,15 +33,15 @@ class BlogController extends AbstractController
                 ->from('contact@jerem-dev.fr')
                 ->to('jeremy.lorthioir24@gmail.com')
                 ->subject('[JEREM DEV] Nouvelle demande de contact')
-                ->text(
-                    'Nom : ' . $contactFormData['nom'] . \PHP_EOL .
-                    'Email : ' . $contactFormData['email'] . \PHP_EOL .
-                    'Telephone : ' . $contactFormData['telephone'] . \PHP_EOL . \PHP_EOL .
-                        $contactFormData['message'],
-                    'text/plain'
+                ->html(
+                    '<h1 style="color: #2d2d2d;font-size: 2rem;font-family: Lato, sans-serif;">Nouvelle demande de contact !</h1>
+                    <p><b style="text-decoration:underline;">Nom :</b> ' . $contactFormData['nom'] . '</p>' .
+                        '<p><b style="text-decoration:underline;">Email :</b> ' . $contactFormData['email'] . '</p>' .
+                        '<p><b style="text-decoration:underline;">Telephone :</b> ' . $contactFormData['telephone'] . '</p>' .
+                        $contactFormData['message']
                 );
             $mailer->send($message);
-            $this->addFlash('success', 'Vore message a été envoyé');
+            $this->addFlash('success', 'Votre message a été envoyé');
             return $this->redirectToRoute('contact');
         }
         return $this->render('blog/contact.html.twig', [
