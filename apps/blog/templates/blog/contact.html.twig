@@ -19,10 +19,7 @@
 			</div>
 			<div class="mb-3">
 				{{ form_row(contact_form.message, {'attr': {'class': 'form-control'}}) }}
-			</div>
-			<div class="form-check">
-				<input type="checkbox" class="form-check-input" id="exampleCheck1">
-				<label class="form-check-label" for="exampleCheck1">Vive la CNIL</label>
+				<small class="form-text text-muted">Aucune donnée personnelle n’est conservée par le site internet via ce formulaire</small>
 			</div>
 			<button type="submit" class="btn btn-primary">Envoyer</button>
 			{{ form_end(contact_form) }}
