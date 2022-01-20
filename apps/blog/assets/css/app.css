@@ -91,7 +91,8 @@ FOOTER
 footer.site-footer {
   margin-top: 80px;
 }
-footer.site-footer .site-info{
+
+footer.site-footer .site-info {
   border-top: 1px solid #ebebeb;
   color: #626262;
   font-size: 13.8656px;
@@ -226,12 +227,46 @@ BLOG POST
 /* ==========================================
 CONTACT
 ==========================================*/
+.contact-title {
+  width: auto;
+  text-align: center;
+  line-height: 120%;
+  font-weight: 700;
+  color: #2F1C6A;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-information-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.contact-information-container .contact-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-information-container .contact-information .contact-information-icon {
+  max-width: 40px;
+}
+
+.contact-information-container .contact-information-text {
+  margin-top: 20px;
+}
+
 .contact-form {
   background-color: #fbfbfb;
   padding: 20px;
   box-shadow: 0 3px 6px rgb(0 0 0 / 15%);
+  border: 1px solid #ebebeb;
+  border-radius: 20px;
 }
 
-.contact-form input {
-  padding: 1rem;
+.contact-form small {
+  font-size: 0.75em;
 }

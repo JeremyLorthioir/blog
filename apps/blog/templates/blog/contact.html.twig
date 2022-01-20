@@ -4,9 +4,25 @@
 {% endblock %}
 
 {% block body %}
-	<div class="row">
-		<div class="col-md-6"></div>
-		<div class="col-md-6">
+	<div class="row justify-content-md-center">
+		<h1 class="contact-title">Restons en contact !</h1>
+		<div class="contact-information-container">
+			<div class="contact-information">
+				<img src="{{ asset('images/marqueur-de-carte.png') }}" alt="" class="contact-information-icon">
+				<p class="contact-information-text">2 rue de la liberation, 74000 Annecy</p>
+			</div>
+			<div class="contact-information">
+				<img src="{{ asset('images/phone-call.png') }}" alt="" class="contact-information-icon">
+				<p class="contact-information-text">+33 (0)6.70.12.50.43</p>
+			</div>
+			<div class="contact-information">
+				<img src="{{ asset('images/email.png') }}" alt="" class="contact-information-icon">
+				<p class="contact-information-text">
+					<a href="mailto:jeremy.lorthioir24@gmail.com">jeremy.lorthioir24@gmail.com</a>
+				</p>
+			</div>
+		</div>
+		<div class="contact-form col-md-6">
 			{{ form_start(contact_form) }}
 			<div class="mb-3">
 				{{ form_row(contact_form.nom, {'attr': {'class': 'form-control'}}) }}
