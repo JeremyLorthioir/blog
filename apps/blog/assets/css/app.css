@@ -140,6 +140,35 @@ HOMEPAGE
   margin: 0;
 }
 
+/* ASIDE */
+.aside-container {
+  margin: 20px 0;
+}
+
+.aside-container .aside-list {
+  list-style: none;
+  margin: 0;
+}
+
+.aside-container .aside-list li {
+  border-bottom: 1px solid #f4f4f4;
+  font-size: 13px;
+  line-height: normal;
+  padding: 0.75rem 0 0.25rem 0;
+}
+
+.aside-container .aside-list li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.aside-container .aside-title {
+  color: #626262;
+  font-size: 13px;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
 /* ==========================================
 BLOG POST
 ==========================================*/
