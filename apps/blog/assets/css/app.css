@@ -172,12 +172,12 @@ HOMEPAGE
 /* ==========================================
 BLOG POST
 ==========================================*/
-.blog-post body {
+.blog-post {
   background: #ffffff;
   color: #222;
-  margin: 2em auto;
+  margin: auto;
   padding: 0 2em;
-  width: 48em;
+  width: 62em;
   line-height: 1.5em;
   font-size: 16px;
   font-weight: 300;
