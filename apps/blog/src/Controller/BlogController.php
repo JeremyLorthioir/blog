@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Form\ContactType;
+use App\Entity\Post;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -54,12 +55,16 @@ class BlogController extends AbstractController
         return new Response('<h1>Ajouter un article</h1>');
     }
 
-    public function show($url)
+    public function show(int $id)
     {
-        $blog_post = [
-            'title' => 'Mon tout premier post',
-            'content' => ''
-        ];
+        $blog_post = $this->getDoctrine()->getRepository(Post::class)->find($id);
+
+        if (!$blog_post) {
+            throw $this->createNotFoundException(
+                'No product found for id ' . $id
+            );
+        }
+
         return $this->render('blog/view.html.twig', [
             'blog_post' => $blog_post,
             'html_content' => $blog_post['content']
